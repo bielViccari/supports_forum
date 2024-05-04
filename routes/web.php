@@ -14,6 +14,8 @@ use App\Http\Controllers\Site\SiteController;
 |
 */
 
+Route::get('/supports/create', [SupportController::class, 'create'])->name('support.create');
+Route::post('/supports/store', [SupportController::class, 'store'])->name('support.store');
 Route::get('/supports', [SupportController::class, 'index'])->name('support.index');
 
 Route::get('/contato', [SiteController::class, 'contact']);
