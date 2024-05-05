@@ -1,5 +1,7 @@
 <h1>list of supports</h1>
 
+<a href="{{ route('support.create') }}">Criar novo assunto</a>
+
 <table>
     <thead>
         <th>Assunto</th>

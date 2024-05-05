@@ -19,6 +19,10 @@ class SupportController extends Controller
     }
 
     public function store(Request $request) {
-        dd($request);
+        $data = $request->only(['subject', 'body']);
+
+        $data['status'] = 'a';  
+        Support::create($data);
+        return redirect()->route('support.index')->with('message',  'Assunto publicado com sucesso');
     }
 }
